@@ -34,7 +34,7 @@ class Number(BaseSchema):
             else:
                 _max = self.maximum
 
-            return float(
+            return random.uniform(_min, _max) if step == 1 else float(
                 step * random.randint(math.ceil(float(_min) / step), math.floor(float(_max) / step))
             )
 
