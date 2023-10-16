@@ -167,7 +167,7 @@ class JSF:
                 return cls
             except: 
                 print(schema["$ref"])
-                 ValueError(f"Cannot parse schema {repr(schema)}")  # pragma: no cover
+                ValueError(f"Cannot parse schema {repr(schema)}")  # pragma: no cover
         elif "anyOf" in schema:
             return self.__parse_anyOf(name, path, schema)
         elif "allOf" in schema:
